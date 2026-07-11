@@ -4,14 +4,20 @@ import {
 import { FaGithub } from "react-icons/fa";
 
 export const PERSONAL_INFO = {
-  name: "Ton Nom",
+  name: "TAREK NAJEM",
   role: "Développeur Full Stack",
+  roles: [
+    "Développeur Full Stack",
+    "Étudiant Ingénierie informatique et réseaux - EMSI RABAT",
+    "Passionné de Web Moderne",
+  ],
   tagline: "Je conçois des applications web modernes, performantes et centrées utilisateur.",
   location: "Rabat, Maroc",
-  email: "ton.email@example.com",
+  email: "tareknajem19@gmail.com",
   github: "https://github.com/tareknjm",
-  linkedin: "https://linkedin.com/in/tonpseudo",
+  linkedin: "https://www.linkedin.com/in/tarek-najem-615554291/",
   cvUrl: "/cv.pdf",
+  photo: "/profile.jpg",
 };
 
 export const NAV_LINKS = [

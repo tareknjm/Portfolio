@@ -1,8 +1,8 @@
 import Layout from "@/components/layout/Layout";
+import Hero from "@/components/sections/Hero";
+import About from "@/components/sections/About";
 
-const sections = [
-  { id: "home", label: "Hero" },
-  { id: "about", label: "À propos" },
+const remainingSections = [
   { id: "skills", label: "Compétences" },
   { id: "experience", label: "Expériences" },
   { id: "projects", label: "Projets" },
@@ -14,7 +14,9 @@ const sections = [
 export default function Home() {
   return (
     <Layout>
-      {sections.map((s) => (
+      <Hero />
+      <About />
+      {remainingSections.map((s) => (
         <section
           key={s.id}
           id={s.id}
