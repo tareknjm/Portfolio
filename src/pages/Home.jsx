@@ -1,9 +1,10 @@
 import Layout from "@/components/layout/Layout";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
+import Skills from "@/components/sections/Skills";
+import Dashboard from "@/components/sections/Dashboard";
 
 const remainingSections = [
-  { id: "skills", label: "Compétences" },
   { id: "experience", label: "Expériences" },
   { id: "projects", label: "Projets" },
   { id: "github", label: "GitHub" },
@@ -16,6 +17,8 @@ export default function Home() {
     <Layout>
       <Hero />
       <About />
+      <Skills />
+      <Dashboard />
       {remainingSections.map((s) => (
         <section
           key={s.id}

@@ -35,3 +35,36 @@ export const COLORS = {
   primary: "#8b5cf6",
   accent: "#22d3ee",
 };
+
+export const COLOR_MAP = {
+  primary: {
+    text: "text-primary-light",
+    bg: "bg-primary",
+    bgSoft: "bg-primary/15",
+    border: "border-primary/30",
+  },
+  cyan: {
+    text: "text-cyan-300",
+    bg: "bg-cyan-400",
+    bgSoft: "bg-cyan-400/15",
+    border: "border-cyan-400/30",
+  },
+  emerald: {
+    text: "text-emerald-300",
+    bg: "bg-emerald-400",
+    bgSoft: "bg-emerald-400/15",
+    border: "border-emerald-400/30",
+  },
+  amber: {
+    text: "text-amber-300",
+    bg: "bg-amber-400",
+    bgSoft: "bg-amber-400/15",
+    border: "border-amber-400/30",
+  },
+  pink: {
+    text: "text-pink-300",
+    bg: "bg-pink-400",
+    bgSoft: "bg-pink-400/15",
+    border: "border-pink-400/30",
+  },
+};
