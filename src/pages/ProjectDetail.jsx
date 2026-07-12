@@ -174,11 +174,7 @@ export default function ProjectDetail() {
                     i === 0 && "sm:col-span-2"
                   )}
                 >
-                  <img
-                    src={img}
-                    alt={project.title}
-                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                  />
+                <img src={img} alt={project.title} loading="lazy" className="w-full h-auto object-cover" />
                 </div>
               );
             })}

@@ -68,10 +68,11 @@ export default function Navbar() {
 </div>
       {/* Navbar Mobile — bouton burger flottant */}
       <div className="fixed top-6 right-6 z-50 lg:hidden">
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="flex items-center justify-center w-12 h-12 rounded-2xl bg-[#08080d]/90 backdrop-blur-xl border border-white/10 shadow-lg"
-        >
+<button
+  onClick={function () { setMobileOpen(!mobileOpen); }}
+  aria-label={mobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
+  className="flex items-center justify-center w-12 h-12 rounded-2xl bg-[#08080d]/90 backdrop-blur-xl border border-white/10 shadow-lg"
+>
           {mobileOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>

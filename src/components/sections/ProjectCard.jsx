@@ -25,11 +25,12 @@ export default function ProjectCard({ project, index }) {
       <div className="relative h-48 overflow-hidden bg-surface2">
         {!imgError ? (
           <img
-            src={project.image}
-            alt={project.title}
-            onError={handleImgError}
-            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-          />
+  src={project.image}
+  alt={project.title}
+  loading="lazy"
+  onError={handleImgError}
+  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+/>
         ) : (
           <div className={cn("w-full h-full flex flex-col items-center justify-center gap-2", colors.bgSoft)}>
             <ImageOff size={28} className={colors.text} />

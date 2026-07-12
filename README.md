@@ -1,16 +1,51 @@
-# React + Vite
+# 🚀 Portfolio — Tarek Najem
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Portfolio personnel développé avec React, Vite, Tailwind CSS et Framer Motion. Présente mon parcours, mes compétences, mes projets et mes expériences en développement Full Stack.
 
-Currently, two official plugins are available:
+🔗 **[Voir le site en ligne](https://tareknajem.dev)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Stack technique
 
-## React Compiler
+- **Frontend** : React 18, Vite, Tailwind CSS, Framer Motion
+- **Routing** : React Router
+- **Formulaire de contact** : EmailJS
+- **Icônes** : Lucide React, React Icons
+- **Déploiement** : Vercel
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Fonctionnalités
 
-## Expanding the Oxlint configuration
+- Design moderne avec glassmorphism et thème dark
+- Animations fluides au scroll (Framer Motion)
+- Grille Bento pour les statistiques et projets
+- Section GitHub connectée en temps réel à l'API GitHub (repos, stats, calendrier de contributions)
+- Pages détail dynamiques pour chaque projet
+- Formulaire de contact fonctionnel (EmailJS)
+- Entièrement responsive (mobile, tablette, desktop)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 📦 Installation locale
+
+```bash
+git clone https://github.com/tareknjm/Portfolio.git
+cd Portfolio
+npm install
+npm run dev
+```
+
+## 📁 Structure du projet
+src/
+components/    → Layout, UI, Sections
+pages/         → Home, ProjectDetail, NotFound
+data/          → Données centralisées (projets, skills, expériences...)
+hooks/         → Hooks personnalisés
+constants/     → Configuration globale
+
+## 📬 Contact
+
+- **Email** : ton.email@example.com
+- **LinkedIn** : [https://www.linkedin.com/in/tarek-najem-615554291/](https://www.linkedin.com/in/tarek-najem-615554291/)
+- **GitHub** : [@tareknjm](https://github.com/tareknjm)
+
+---
+
+Fait avec ❤️ par Tarek Najem
+
