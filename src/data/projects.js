@@ -100,7 +100,7 @@ technologies: ["Spring Boot", "JWT", "JavaMailSender", "React", "Vite", "Framer 
       "/projects/cabinet-rdv.jpg",
       "/projects/cabinet-planing.jpg",
       "/projects/cabinet-planifier.jpg",
-      "/projects/cabinet-dashboard.jpg",
+      "/projects/cabinet-medecin.jpg",
       "/projects/cabinet-ordonnance.jpg",
     ],
     description:
