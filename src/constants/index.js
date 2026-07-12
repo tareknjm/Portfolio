@@ -68,3 +68,8 @@ export const COLOR_MAP = {
     border: "border-pink-400/30",
   },
 };
+export const EMAILJS_CONFIG = {
+  serviceId: "service_naj",
+  templateId: "template_zlwv7sg",
+  publicKey: "KM0hSyqTszMyJ8J33",
+};
