@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import ProjectDetail from "./pages/ProjectDetail";
 import NotFound from "./pages/NotFound";
 import PageTransition from "./components/layout/PageTransition";
-
+import GameLauncher from "./components/game/GameLauncher";
 function App() {
   const location = useLocation();
 
@@ -36,6 +36,7 @@ function App() {
           }
         />
       </Routes>
+      <GameLauncher />
     </AnimatePresence>
   );
 }
