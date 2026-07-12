@@ -37,41 +37,58 @@ function Terminal({ onClose }) {
   }
 
   async function handleCommand(raw) {
-    const cmd = raw.trim();
-    pushLine("input", cmd);
-    if (cmd === "") return;
+  const cmd = raw.trim();
+  pushLine("input", cmd);
+  if (cmd === "") return;
 
-    if (cmd === "clear") { setLines([]); return; }
-    if (cmd === "help") { HELP_TEXT.forEach(function (l) { pushLine("output", l); }); return; }
-    if (cmd === "whoami") { pushLine("output", "tarek-najem — Développeur Full Stack — EMSI Rabat"); return; }
-    if (cmd === "ls projects" || cmd === "ls projects/") {
-      pushLine("output", "e-learn.project   emsi-marks.project   easyhotel.project");
-      return;
-    }
+  // Normalise pour la comparaison : minuscules + espaces multiples réduits à un seul
+  const normalized = cmd.toLowerCase().replace(/\s+/g, " ").trim();
+  // Version sans aucun espace, pour tolérer "lsprojects", "whoami", etc.
+  const compact = cmd.toLowerCase().replace(/\s+/g, "");
 
-    const askMatch = cmd.match(/^ask\s+"(.+)"$/) || cmd.match(/^ask\s+(.+)$/);
-    if (askMatch) {
-      const question = askMatch[1];
-      setLoading(true);
-      try {
-        const data = await askAgent(question, history);
-        pushLine("agent", data.reply);
-        if (data.toolsUsed && data.toolsUsed.length > 0) {
-          pushLine("tool", "🔧 outils appelés : " + data.toolsUsed.join(", "));
-        }
-        setHistory(function (prev) {
-          return [...prev, { role: "user", content: question }, { role: "assistant", content: data.reply }];
-        });
-      } catch {
-        pushLine("error", "Erreur : impossible de contacter l'agent IA.");
-      } finally {
-        setLoading(false);
-      }
-      return;
-    }
-
-    pushLine("error", `Commande inconnue : ${cmd}. Tape 'help'.`);
+  if (normalized === "clear" || compact === "clear") { setLines([]); return; }
+  if (normalized === "help" || compact === "help") { HELP_TEXT.forEach(function (l) { pushLine("output", l); }); return; }
+  if (normalized === "whoami" || compact === "whoami") { pushLine("output", "tarek-najem — Développeur Full Stack — EMSI Rabat"); return; }
+  if (
+    normalized === "ls projects" ||
+    normalized === "ls projects/" ||
+    compact === "lsprojects" ||
+    compact === "lsprojects/"
+  ) {
+    pushLine("output", "e-learn.project   emsi-marks.project   easyhotel.project");
+    return;
   }
+
+  // "ask" tolère : espace(s), aucun espace, avec ou sans guillemets
+  const askMatch =
+    cmd.match(/^ask\s*"(.+)"\s*$/i) || cmd.match(/^ask\s*(.+?)\s*$/i);
+
+  if (askMatch) {
+    const question = askMatch[1].trim();
+    if (question === "") {
+      pushLine("error", "Précise ta question, ex: ask \"quel est ton projet préféré ?\"");
+      return;
+    }
+    setLoading(true);
+    try {
+      const data = await askAgent(question, history);
+      pushLine("agent", data.reply);
+      if (data.toolsUsed && data.toolsUsed.length > 0) {
+        pushLine("tool", "🔧 outils appelés : " + data.toolsUsed.join(", "));
+      }
+      setHistory(function (prev) {
+        return [...prev, { role: "user", content: question }, { role: "assistant", content: data.reply }];
+      });
+    } catch {
+      pushLine("error", "Erreur : impossible de contacter l'agent IA.");
+    } finally {
+      setLoading(false);
+    }
+    return;
+  }
+
+  pushLine("error", `Commande inconnue : ${cmd}. Tape 'help'.`);
+}
 
   function handleSubmit(e) {
     e.preventDefault();
