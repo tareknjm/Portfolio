@@ -1,51 +1,36 @@
-# 🚀 Portfolio — Tarek Najem
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Portfolio personnel développé avec React, Vite, Tailwind CSS et Framer Motion. Présente mon parcours, mes compétences, mes projets et mes expériences en développement Full Stack.
+## Getting Started
 
-🔗 **[Voir le site en ligne](https://tareknajem.dev)**
-
-## 🛠️ Stack technique
-
-- **Frontend** : React 18, Vite, Tailwind CSS, Framer Motion
-- **Routing** : React Router
-- **Formulaire de contact** : EmailJS
-- **Icônes** : Lucide React, React Icons
-- **Déploiement** : Vercel
-
-## ✨ Fonctionnalités
-
-- Design moderne avec glassmorphism et thème dark
-- Animations fluides au scroll (Framer Motion)
-- Grille Bento pour les statistiques et projets
-- Section GitHub connectée en temps réel à l'API GitHub (repos, stats, calendrier de contributions)
-- Pages détail dynamiques pour chaque projet
-- Formulaire de contact fonctionnel (EmailJS)
-- Entièrement responsive (mobile, tablette, desktop)
-
-## 📦 Installation locale
+First, run the development server:
 
 ```bash
-git clone https://github.com/tareknjm/Portfolio.git
-cd Portfolio
-npm install
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## 📁 Structure du projet
-src/
-components/    → Layout, UI, Sections
-pages/         → Home, ProjectDetail, NotFound
-data/          → Données centralisées (projets, skills, expériences...)
-hooks/         → Hooks personnalisés
-constants/     → Configuration globale
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 📬 Contact
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- **Email** : ton.email@example.com
-- **LinkedIn** : [https://www.linkedin.com/in/tarek-najem-615554291/](https://www.linkedin.com/in/tarek-najem-615554291/)
-- **GitHub** : [@tareknjm](https://github.com/tareknjm)
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
----
+## Learn More
 
-Fait avec ❤️ par Tarek Najem
+To learn more about Next.js, take a look at the following resources:
 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
