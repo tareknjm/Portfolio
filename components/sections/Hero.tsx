@@ -295,7 +295,13 @@ export default function Hero() {
             <MagneticWrap strength={16} radius={80}>
               <Link
                 href="#projects"
-                onClick={() => playTactileClick()}
+                onClick={(e) => {
+                  e.preventDefault();
+                  playTactileClick();
+                  document
+                    .getElementById("projects")
+                    ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
                 className="group inline-flex items-center gap-2.5 rounded-full px-7 py-3.5 text-sm font-semibold transition-colors duration-300 hover:brightness-110"
                 style={{ background: "var(--hero-cream)", color: "var(--hero-ink)" }}
               >
