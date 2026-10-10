@@ -64,9 +64,7 @@ export const metadata: Metadata = {
     title: "Tarek Najem — Élève ingénieur Full Stack · Java, Spring & Next.js",
     description: "Applications web modernes, performantes et centrées utilisateur.",
   },
-  icons: {
-    icon: "/favicon.png",
-  },
+
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
