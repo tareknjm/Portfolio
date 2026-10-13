@@ -56,14 +56,14 @@ export default function HeroProfileCard({ photoSrc = "/profile.jpg", className =
       onPointerMove={onMove}
       onPointerLeave={onLeave}
       className={cn(
-        "group relative w-full max-w-[21rem] select-none rounded-[20px] transition-transform duration-200 ease-out",
+        "group relative w-full max-w-[20rem] sm:max-w-[21rem] mx-auto lg:mx-0 select-none rounded-[20px] transition-transform duration-200 ease-out [--card-base-rot:0deg] lg:[--card-base-rot:-1.6deg]",
         className
       )}
       style={{
         color: INK,
         background: "var(--hero-cream)",
-        transform: "perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) rotate(-1.6deg)",
-        boxShadow: "0 30px 60px -20px rgba(0,0,0,0.75), 0 2px 0 rgba(255,255,255,0.5) inset",
+        transform: "perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) rotate(var(--card-base-rot, 0deg))",
+        boxShadow: "0 20px 45px -15px rgba(0,0,0,0.7), 0 2px 0 rgba(255,255,255,0.5) inset",
         willChange: "transform",
       }}
     >

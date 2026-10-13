@@ -86,8 +86,8 @@ function Pass({
             current ? "border-[rgba(26,19,16,.25)]" : "border-white/15"
           )}
         >
-          <span className="absolute -left-8 -top-2 size-4 rounded-full bg-background" />
-          <span className="absolute -right-8 -top-2 size-4 rounded-full bg-background" />
+          <span className="absolute -left-6 -top-2 size-4 rounded-full bg-background sm:-left-8" />
+          <span className="absolute -right-6 -top-2 size-4 rounded-full bg-background sm:-right-8" />
         </div>
 
         <p className={cn("font-mono text-[10px] uppercase tracking-[0.2em]", sub)}>stack</p>

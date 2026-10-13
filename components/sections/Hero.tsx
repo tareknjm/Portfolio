@@ -291,7 +291,7 @@ export default function Hero() {
           </motion.p>
 
           {/* Actions */}
-          <motion.div variants={fadeUp} className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+          <motion.div variants={fadeUp} className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3.5">
             <MagneticWrap strength={16} radius={80}>
               <Link
                 href="#projects"
@@ -302,7 +302,7 @@ export default function Hero() {
                     .getElementById("projects")
                     ?.scrollIntoView({ behavior: "smooth", block: "start" });
                 }}
-                className="group inline-flex items-center gap-2.5 rounded-full px-7 py-3.5 text-sm font-semibold transition-colors duration-300 hover:brightness-110"
+                className="group inline-flex items-center gap-2.5 rounded-full px-6 py-3 sm:px-7 sm:py-3.5 text-sm font-semibold transition-colors duration-300 hover:brightness-110 shadow-sm"
                 style={{ background: "var(--hero-cream)", color: "var(--hero-ink)" }}
               >
                 <span>Voir les projets</span>
@@ -315,7 +315,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => playTactileClick()}
-              className="group inline-flex items-center gap-2 border-b border-white/25 pb-0.5 text-sm font-medium text-white/85 transition-colors hover:border-white hover:text-white"
+              className="group inline-flex items-center gap-1.5 border-b border-white/25 pb-0.5 text-sm font-medium text-white/85 transition-colors hover:border-white hover:text-white"
             >
               <FileText className="h-4 w-4" style={{ color: "var(--hero-accent)" }} />
               <span>Mon CV</span>
@@ -325,7 +325,7 @@ export default function Hero() {
             <Link
               href="#contact"
               onClick={() => playTactileClick()}
-              className="group inline-flex items-center gap-2 border-b border-white/25 pb-0.5 text-sm font-medium text-white/85 transition-colors hover:border-white hover:text-white"
+              className="group inline-flex items-center gap-1.5 border-b border-white/25 pb-0.5 text-sm font-medium text-white/85 transition-colors hover:border-white hover:text-white"
             >
               <Mail className="h-4 w-4" style={{ color: "var(--hero-accent)" }} />
               <span>Me contacter</span>
@@ -333,14 +333,14 @@ export default function Hero() {
           </motion.div>
 
           {/* Entrée terminal */}
-          <motion.div variants={fadeUp} className="mt-8 flex flex-wrap items-center gap-3">
+          <motion.div variants={fadeUp} className="mt-7 flex flex-wrap items-center gap-2.5 sm:gap-3">
             <button
               type="button"
               onClick={() => {
                 playTactileClick();
                 setTerminalOpen(true);
               }}
-              className="group inline-flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-2.5 font-mono text-xs text-white/75 transition-colors hover:border-white/25 hover:bg-white/[0.06]"
+              className="group inline-flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/[0.03] px-3.5 py-2 sm:px-4 sm:py-2.5 font-mono text-xs text-white/75 transition-colors hover:border-white/25 hover:bg-white/[0.06]"
               aria-label="Ouvrir le terminal interactif"
             >
               <span style={{ color: "var(--hero-accent)" }} aria-hidden>

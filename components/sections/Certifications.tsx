@@ -387,7 +387,13 @@ export default function Certifications() {
             </div>
 
             {/* wire horizontale = tablist (6.7 / 6.9) */}
-            <div role="tablist" aria-label="Certifications" onKeyDown={onKey} className="relative mt-2 flex">
+            <div
+              role="tablist"
+              aria-label="Certifications"
+              onKeyDown={onKey}
+              className="relative mt-2 flex overflow-x-auto scrollbar-hide snap-x snap-mandatory sm:overflow-x-visible"
+              style={{ WebkitOverflowScrolling: "touch" }}
+            >
               <span aria-hidden className="absolute left-0 right-0 top-[3px] h-px bg-white/15" />
               {certs.map((c, i) => {
                 const isActive = i === active;
@@ -403,7 +409,7 @@ export default function Certifications() {
                     aria-label={`${pad(i)} · ${c.title}`}
                     tabIndex={isActive ? 0 : -1}
                     onClick={() => go(i)}
-                    className={`relative min-w-0 flex-1 pt-5 pr-3 text-left [@media(pointer:coarse)]:min-h-11 ${ring}`}
+                    className={`relative min-w-[4rem] shrink-0 snap-start flex-1 pt-5 pr-3 text-left [@media(pointer:coarse)]:min-h-11 sm:min-w-0 sm:shrink ${ring}`}
                   >
                     {/* segment allumé jusqu'au nœud actif */}
                     {i < n - 1 && (
